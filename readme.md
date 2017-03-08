@@ -11,6 +11,10 @@ Features
 
 4-Use QuantConnect api for calculating positions, colleterals, fees, spreads etc.
 
+5-BackTesting 
+
+6-Ready to use more than 30 indicators and osculators
+
 
 NEEDS to improve calculating.
 
