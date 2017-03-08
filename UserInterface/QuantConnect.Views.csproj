@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C68BEEED-B0C0-4002-94D4-1E871133D02A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuantConnect.Views</RootNamespace>
+    <AssemblyName>QuantConnect.Views</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <LangVersion>5</LangVersion>
+    <SccProjectName>"%24/DotNet/QuantConnect.Lean", KQIBAAAA</SccProjectName>
+    <SccLocalPath>..</SccLocalPath>
+    <SccAuxPath />
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FastColoredTextBox, Version=2.16.18.1, Culture=neutral, PublicKeyToken=fb8aa12b994ef61b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\FastColoredTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TabStrip, Version=2.0.2523.29272, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\TabStrip.dll</HintPath>
+    </Reference>
+    <Reference Include="Teb.Infra, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Teb.Infra.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AlgoTemplates\Debug\TEBBasicAlgo4.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlgoTemplates\Debug\TEBBasicAlgo5.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="AlgoTemplates\BubbleAlgorithm.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AlgoTemplates\DataConsolidationAlgorithm.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AlgoTemplates\DividendAlgorithm.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AlgoTemplates\LiveFeaturesAlgorithm.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AlgoTemplates\MACDTrendAlgorithm.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AlgoTemplates\MarginCallEventsAlgorithm.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AlgoTemplates\MovingAverageCrossAlgorithm.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AlgoTemplates\RegressionAlgorithm.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AlgoTemplates\Debug\TEBMACDAlgo.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="AlgoTemplates\Debug\TEBChartTestAlgo.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="AlgoTemplates\IndicatorSuiteAlgorithm.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AlgoTemplates\DailyAlgorithm.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Compile Include="Controls\ActiveGrid\ActiveGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ActiveGrid\CellUpdateEventArgs.cs" />
+    <Compile Include="DataFeeds\MatriksDataFeed.cs" />
+    <Compile Include="DataFeeds\RandomDataFeed.cs" />
+    <Compile Include="Model\Algo\AlgoEngineBuilder.cs" />
+    <Compile Include="Model\Algo\AlgoSpec.cs" />
+    <EmbeddedResource Include="AlgoTemplates\Debug\TEBBasicAlgo1.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlgoTemplates\Debug\TEBBasicAlgo2.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlgoTemplates\Debug\TEBBasicAlgo3.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Compile Include="Model\Algo\AlgoCode.cs" />
+    <Compile Include="Model\CompileFunc.cs" />
+    <Compile Include="Model\ControlHelper.cs" />
+    <Compile Include="Model\ItemEventArgs.cs" />
+    <Compile Include="Model\UI\LbxMessageItem.cs" />
+    <Compile Include="Model\UI\SafeBindingSource.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Stocks\Stock.cs" />
+    <Compile Include="Model\Stocks\StockList.cs" />
+    <Compile Include="Model\SyncList.cs" />
+    <Compile Include="Model\UI\UiQueue.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Model\QueryPerfCounter.cs" />
+    <Compile Include="UserControls\KeyValueLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\KeyValueLabel.Designer.cs">
+      <DependentUpon>KeyValueLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\InvisibleCharsRenderer.cs" />
+    <Compile Include="Model\UI\TbInfo.cs" />
+    <Compile Include="WinForms\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\ChartPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\ChartPopup.Designer.cs">
+      <DependentUpon>ChartPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\EditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\EditorForm.Designer.cs">
+      <DependentUpon>EditorForm.cs</DependentUpon>
+    </Compile>
+    <None Include="WinForms\EngineWinForm.cs">
+      <SubType>Form</SubType>
+    </None>
+    <None Include="WinForms\EngineWinForm.Designer.cs">
+      <DependentUpon>EngineWinForm.cs</DependentUpon>
+    </None>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WinForms\LeanEngineWinForm.Extensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Algorithm.CSharp\QuantConnect.Algorithm.CSharp.csproj">
+      <Project>{39a81c16-a1e8-425e-a8f2-1433adb80228}</Project>
+      <Name>QuantConnect.Algorithm.CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Algorithm.VisualBasic\QuantConnect.Algorithm.VisualBasic.vbproj">
+      <Project>{af8f124b-b441-4aa7-92b7-cea72bdb4118}</Project>
+      <Name>QuantConnect.Algorithm.VisualBasic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AlgorithmFactory\QuantConnect.AlgorithmFactory.csproj">
+      <Project>{e99d056a-b6fb-48d2-9f7c-683c54cebbf9}</Project>
+      <Name>QuantConnect.AlgorithmFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Algorithm\QuantConnect.Algorithm.csproj">
+      <Project>{3240aca4-bdd4-4d24-ac36-bbb651c39212}</Project>
+      <Name>QuantConnect.Algorithm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Api\QuantConnect.Api.csproj">
+      <Project>{c5d44209-49a0-4505-a870-043c5ef5fddf}</Project>
+      <Name>QuantConnect.Api</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\QuantConnect.csproj">
+      <Project>{2545C0B4-FABB-49C9-8DD1-9AD7EE23F86B}</Project>
+      <Name>QuantConnect</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Configuration\QuantConnect.Configuration.csproj">
+      <Project>{0aeb4ea3-28c8-476e-89fd-926f06590b4c}</Project>
+      <Name>QuantConnect.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Engine\QuantConnect.Lean.Engine.csproj">
+      <Project>{12156f46-d07e-4e3d-ad2b-7409e82ab62f}</Project>
+      <Name>QuantConnect.Lean.Engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logging\QuantConnect.Logging.csproj">
+      <Project>{01911409-86be-4e7d-9947-df714138610d}</Project>
+      <Name>QuantConnect.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Messaging\QuantConnect.Messaging.csproj">
+      <Project>{f2e90e2d-ba25-40e2-b39a-0ba31e68f7f8}</Project>
+      <Name>QuantConnect.Messaging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuantConnect.Debug\QuantConnect.Debug.csproj">
+      <Project>{80a187ac-a213-436c-9a09-11009b9eab76}</Project>
+      <Name>QuantConnect.Debug</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Queues\QuantConnect.Queues.csproj">
+      <Project>{d6633172-1368-4df6-9444-825c3e00c819}</Project>
+      <Name>QuantConnect.Queues</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ToolBox\QuantConnect.ToolBox.csproj">
+      <Project>{ac9a142c-b485-44d7-91ff-015c22c43d05}</Project>
+      <Name>QuantConnect.ToolBox</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="__config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\KeyValueLabel.resx">
+      <DependentUpon>KeyValueLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\ChartPopup.resx">
+      <DependentUpon>ChartPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\EditorForm.resx">
+      <DependentUpon>EditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\EngineWinForm.resx">
+      <DependentUpon>EngineWinForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action_Debug_Start.png" />
+    <None Include="Resources\Action_Debug_Stop.png" />
+    <None Include="Resources\backward0_16x16.png" />
+    <None Include="Resources\bookmark--plus.png" />
+    <None Include="Resources\box.png" />
+    <None Include="Resources\bye.gif" />
+    <None Include="Resources\class_libraries.png" />
+    <None Include="Resources\edit-padding-top.png" />
+    <None Include="Resources\forward_16x16.png" />
+    <None Include="Resources\layer--minus.png" />
+    <None Include="Resources\layer--plus.png" />
+    <None Include="Resources\lightning.png" />
+    <None Include="Resources\lol.gif" />
+    <None Include="Resources\property.png" />
+    <None Include="Resources\redo_16x16.png" />
+    <None Include="Resources\rolleyes.gif" />
+    <None Include="Resources\sad_16x16.png" />
+    <None Include="Resources\smile_16x16.png" />
+    <None Include="Resources\undo_16x16.png" />
+    <None Include="Resources\unsure.gif" />
+    <None Include="AlgoTemplates\BasicAlgorithm.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Dll\FastColoredTextBox.dll" />
+    <Content Include="Dll\TabStrip.dll" />
+    <Content Include="Dll\Teb.Infra.dll" />
+    <Content Include="FIX50CASHSP1_OLD.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FIX50SP2NASDAQ.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FIX50VIOPSP2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FIXT11NASDAQ.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FIXTCASH11_OLD.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FIXTVIOP11.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

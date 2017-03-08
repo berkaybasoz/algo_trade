@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D3E13CF-2D14-4180-A42D-F0A13AF0ADE2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuantConnect.Brokerages</RootNamespace>
+    <AssemblyName>QuantConnect.Brokerages</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <LangVersion>5</LangVersion>
+    <SccProjectName>"%24/DotNet/QuantConnect.Lean", KQIBAAAA</SccProjectName>
+    <SccLocalPath>..</SccLocalPath>
+    <SccAuxPath />
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\QuantConnect.Brokerages.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IKVM.OpenJDK.Beans, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.OpenJDK.Beans.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Charsets, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.OpenJDK.Charsets.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Corba, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.OpenJDK.Corba.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Core, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.OpenJDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Jdbc">
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.OpenJDK.Jdbc.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Management, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.OpenJDK.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Media, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.OpenJDK.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Misc, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.OpenJDK.Misc.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Naming, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.OpenJDK.Naming.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Remoting, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.OpenJDK.Remoting.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Security, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.OpenJDK.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.SwingAWT, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.OpenJDK.SwingAWT.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Text, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.OpenJDK.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Tools">
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.OpenJDK.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Util, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.OpenJDK.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.API, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.OpenJDK.XML.API.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Bind">
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.OpenJDK.XML.Bind.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Crypto">
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.OpenJDK.XML.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Parse">
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.OpenJDK.XML.Parse.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Transform">
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.OpenJDK.XML.Transform.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.WebServices">
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.OpenJDK.XML.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.XPath">
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.OpenJDK.XML.XPath.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Reflection">
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime.JNI, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\IKVM-WithExes.7.3.4830.1\tools\IKVM.Runtime.JNI.dll</HintPath>
+    </Reference>
+    <Reference Include="Krs.Ats.IBNet">
+      <HintPath>..\packages\Krs.Ats.IBNet.9.66.0.31\lib\net20\Krs.Ats.IBNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Logger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Logger.dll</HintPath>
+    </Reference>
+    <Reference Include="NDde, Version=2.1.563.0, Culture=neutral, PublicKeyToken=0e69b86b1560e4d0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\NDde.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NodaTime, Version=1.3.0.0, Culture=neutral, PublicKeyToken=4226afe0d9b296d1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NodaTime.1.3.1\lib\net35-Client\NodaTime.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="QuantConnect.Fxcm, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Fxcm\QuantConnect.Fxcm.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickFix, Version=1.5.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\QuickFix.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RestSharp.105.1.0\lib\net45\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Scs, Version=1.1.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Scs.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Teb.DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Teb.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Teb.FIX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Teb.FIX.dll</HintPath>
+    </Reference>
+    <Reference Include="Teb.FIX.ServiceLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Teb.FIX.ServiceLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Teb.Infra, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Teb.Infra.dll</HintPath>
+    </Reference>
+    <Reference Include="Teb.Notification, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Teb.Notification.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Common\Properties\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Backtesting\BacktestingBrokerage.cs" />
+    <Compile Include="Backtesting\BacktestingBrokerageFactory.cs" />
+    <Compile Include="Brokerage.cs" />
+    <Compile Include="BrokerageException.cs" />
+    <Compile Include="BrokerageFactory.cs" />
+    <Compile Include="Fxcm\FxcmBrokerage.cs" />
+    <Compile Include="Fxcm\FxcmBrokerage.DataQueueHandler.cs" />
+    <Compile Include="Fxcm\FxcmBrokerage.Messaging.cs" />
+    <Compile Include="Fxcm\FxcmBrokerage.Util.cs" />
+    <Compile Include="Fxcm\FxcmBrokerageFactory.cs" />
+    <Compile Include="Fxcm\FxcmSymbolMapper.cs" />
+    <Compile Include="InteractiveBrokers\InteractiveBrokersBrokerage.cs" />
+    <Compile Include="InteractiveBrokers\InteractiveBrokersBrokerageFactory.cs" />
+    <Compile Include="InteractiveBrokers\InteractiveBrokersGatewayRunner.cs" />
+    <Compile Include="InteractiveBrokers\InteractiveBrokersSymbolMapper.cs" />
+    <Compile Include="ISymbolMapper.cs" />
+    <Compile Include="Oanda\DataType\Account.cs" />
+    <Compile Include="Oanda\DataType\Communications\AccountResponse.cs" />
+    <Compile Include="Oanda\DataType\Communications\AccountsResponse.cs" />
+    <Compile Include="Oanda\DataType\Communications\InstrumentsResponse.cs" />
+    <Compile Include="Oanda\DataType\Communications\OrdersResponse.cs" />
+    <Compile Include="Oanda\DataType\Communications\PositionsResponse.cs" />
+    <Compile Include="Oanda\DataType\Communications\PostOrderResponse.cs" />
+    <Compile Include="Oanda\DataType\Communications\PricesResponse.cs" />
+    <Compile Include="Oanda\DataType\Communications\Response.cs" />
+    <Compile Include="Oanda\DataType\Communications\TradesResponse.cs" />
+    <Compile Include="Oanda\DataType\Event.cs" />
+    <Compile Include="Oanda\DataType\Heartbeat.cs" />
+    <Compile Include="Oanda\DataType\IHeartbeat.cs" />
+    <Compile Include="Oanda\DataType\Instrument.cs" />
+    <Compile Include="Oanda\DataType\Order.cs" />
+    <Compile Include="Oanda\DataType\Position.cs" />
+    <Compile Include="Oanda\DataType\Price.cs" />
+    <Compile Include="Oanda\DataType\Communications\RateStreamResponse.cs" />
+    <Compile Include="Oanda\DataType\TradeData.cs" />
+    <Compile Include="Oanda\DataType\Transaction.cs" />
+    <Compile Include="Oanda\Environment.cs" />
+    <Compile Include="Oanda\Framework\Common.cs" />
+    <Compile Include="Oanda\Framework\EndpointResolver.cs" />
+    <Compile Include="Oanda\OandaBrokerage.cs" />
+    <Compile Include="Oanda\OandaBrokerage.DataQueueHandler.cs" />
+    <Compile Include="Oanda\OandaBrokerage.Rest.cs" />
+    <Compile Include="Oanda\OandaBrokerageFactory.cs" />
+    <Compile Include="Oanda\OandaSymbolMapper.cs" />
+    <Compile Include="Oanda\Server.cs" />
+    <Compile Include="Oanda\Session\EventsSession.cs" />
+    <Compile Include="Oanda\Session\RatesSession.cs" />
+    <Compile Include="Oanda\Session\StreamSession.cs" />
+    <Compile Include="Paper\PaperBrokerage.cs" />
+    <Compile Include="Paper\PaperBrokerageFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TEB\ConvertHelper.cs" />
+    <Compile Include="TEB\Data\AbstractSecurityDataProvider.cs" />
+    <Compile Include="TEB\Data\DbLogQueueCollection.cs" />
+    <Compile Include="TEB\Data\ExchangeCollection.cs" />
+    <Compile Include="TEB\Data\MarketCollection.cs" />
+    <Compile Include="TEB\Data\MatriksListener.cs" />
+    <Compile Include="TEB\Data\NewsDbAdapter.cs" />
+    <Compile Include="TEB\Data\ParserArg.cs" />
+    <Compile Include="TEB\Data\ParserQueue.cs" />
+    <Compile Include="TEB\Data\QuoteCollection.cs" />
+    <Compile Include="TEB\Data\SecurityBuilder.cs" />
+    <Compile Include="TEB\Data\SecurityCollection.cs" />
+    <Compile Include="TEB\Data\SecurityDbLogAdapter.cs" />
+    <Compile Include="TEB\Data\SecurityDistributeOption.cs" />
+    <Compile Include="TEB\Data\SecurityPropertySetter.cs" />
+    <Compile Include="TEB\Data\SocketBase.cs" />
+    <Compile Include="TEB\Data\SocketClient.cs" />
+    <Compile Include="TEB\Data\SocketServer.cs" />
+    <Compile Include="TEB\Data\StreamMessageQueue.cs" />
+    <Compile Include="TEB\Data\StreamQueue.cs" />
+    <Compile Include="TEB\Data\StringQueue.cs" />
+    <Compile Include="TEB\Data\TEBMatriksTcpDataQueue.cs" />
+    <Compile Include="TEB\FIX\DBHelper.cs" />
+    <Compile Include="TEB\FIX\FIXContext.cs" />
+    <Compile Include="TEB\FIX\SessionDBSetting.cs" />
+    <Compile Include="TEB\FIX\TradeDbHelper.cs" />
+    <Compile Include="TEB\Data\MatriksTcpDataProvider.cs" />
+    <Compile Include="TEB\TEBBrokerage.cs" />
+    <Compile Include="TEB\Data\TEBMatriksTcpDataQueueImpl.cs" />
+    <Compile Include="TEB\TEBBrokerageFactory.cs" />
+    <Compile Include="TEB\TEBBrokeragePartial.cs" />
+    <Compile Include="Tradier\TradierBrokerage.cs" />
+    <Compile Include="Tradier\Balances.cs" />
+    <Compile Include="Tradier\Common.cs" />
+    <Compile Include="Tradier\Data.cs" />
+    <Compile Include="Tradier\Fault.cs" />
+    <Compile Include="Tradier\GainLoss.cs" />
+    <Compile Include="Tradier\History.cs" />
+    <Compile Include="Tradier\Orders.cs" />
+    <Compile Include="Tradier\Positions.cs" />
+    <Compile Include="Tradier\Tokens.cs" />
+    <Compile Include="Tradier\TradierBrokerageFactory.cs" />
+    <Compile Include="Tradier\UserProfile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="InteractiveBrokers\run-ib-controller.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="InteractiveBrokers\run-ib-controller.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Oanda\LICENSE.md" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\QuantConnect.csproj">
+      <Project>{2545c0b4-fabb-49c9-8dd1-9ad7ee23f86b}</Project>
+      <Name>QuantConnect</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Configuration\QuantConnect.Configuration.csproj">
+      <Project>{0AEB4EA3-28C8-476E-89FD-926F06590B4C}</Project>
+      <Name>QuantConnect.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logging\QuantConnect.Logging.csproj">
+      <Project>{01911409-86be-4e7d-9947-df714138610d}</Project>
+      <Name>QuantConnect.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuantConnect.Debug\QuantConnect.Debug.csproj">
+      <Project>{80a187ac-a213-436c-9a09-11009b9eab76}</Project>
+      <Name>QuantConnect.Debug</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Fxcm\QuantConnect.Fxcm.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dll\Logger.dll" />
+    <Content Include="Dll\Logger.pdb" />
+    <Content Include="Dll\NDde.dll" />
+    <Content Include="Dll\protobuf-net.dll" />
+    <Content Include="Dll\QuickFix.dll" />
+    <Content Include="Dll\Scs.dll" />
+    <Content Include="Dll\Teb.DAL.dll" />
+    <Content Include="Dll\Teb.DAL.pdb" />
+    <Content Include="Dll\TEB.Data.Provider.dll" />
+    <Content Include="Dll\TEB.Data.Provider.pdb" />
+    <Content Include="Dll\Teb.FIX.dll" />
+    <Content Include="Dll\Teb.FIX.pdb" />
+    <Content Include="Dll\Teb.FIX.ServiceLib.dll" />
+    <Content Include="Dll\Teb.FIX.ServiceLib.pdb" />
+    <Content Include="Dll\Teb.Infra.dll" />
+    <Content Include="Dll\Teb.Infra.pdb" />
+    <Content Include="Dll\Teb.Notification.dll" />
+    <Content Include="Dll\Teb.Notification.pdb" />
+    <Content Include="Dll\TEB.Socket.dll" />
+    <Content Include="Dll\TEB.Socket.pdb" />
+    <Content Include="Dll\TebYat.SocketLib.dll" />
+    <Content Include="Dll\TebYat.SocketLib.pdb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
