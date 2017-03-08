@@ -3,7 +3,7 @@
 
 Features
 
-1-It recieves data from MATRIKS Stream Server
+1-It recieves tcp market security datas from MATRIKS Stream Server
 
 2-Sends orders via FIX protocol
 
