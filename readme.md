@@ -1,10 +1,14 @@
+![alt tag](Documentation/Screenshot7.PNG)
 ![alt tag](Documentation/Screenshot1.PNG)
 
 Features
 
 1-It recieves data from MATRIKS Stream Server
+
 2-Sends orders via FIX protocol
+
 3-Dynamic algo writing on runtime with C#
+
 4-Use QuantConnect api for calculating positions, colleterals, fees, spreads etc.
 
 
